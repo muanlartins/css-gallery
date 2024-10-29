@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  background: #1e1e1e;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page__bars {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.page__bars__bar {
+  position: relative;
+  background: #e4d7d7;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+  animation: breathing 1s infinite alternate;
+}
+
+@keyframes breathing {
+  to {
+    background: #ce0e0e;
+    height: var(--height);
+    transform: translateY(var(--translate));
+  }
+}
